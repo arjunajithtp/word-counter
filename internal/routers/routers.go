@@ -9,6 +9,7 @@ func GetRoutes() *chi.Mux {
 	mux := chi.NewRouter()
 
 	mux.Get("/home", handlers.HomeHandler)
+	mux.Post("/home", handlers.HomeHandler)
 
 	return mux
 }
