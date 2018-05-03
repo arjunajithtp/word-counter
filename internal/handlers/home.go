@@ -4,7 +4,6 @@ import (
 	"net/http"
 	"log"
 	"github.com/arjunajithtp/word-counter/internal/helpers"
-	"github.com/arjunajithtp/word-counter/internal/services"
 )
 
 func HomeHandler(w http.ResponseWriter, r *http.Request)  {
@@ -16,20 +15,9 @@ func HomeHandler(w http.ResponseWriter, r *http.Request)  {
 		if err != nil {
 			log.Println("error while trying to get webite contents: ", err)
 		}
-		words, err := services.HTMLTagRemover(dataByte)
-		if err != nil {
-			log.Println("error while trying to remove the html tags: ", err)
-		}
+		words := helpers.HTMLTagRemover(dataByte)
 
-		var wordCountMap map[string]int
-		for _, word := range words {
-			if wordCountMap[word] == 0 {
-				wordCountMap = make(map[string]int)
-			}
-			count := wordCountMap[word]
-			count++
-			wordCountMap[word] = count
-		}
+		wordCountMap := helpers.GetWordCount(words)
 		log.Println(wordCountMap)
 		return
 	}

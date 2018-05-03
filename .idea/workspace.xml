@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0aec2dc1-88f9-41f5-b4aa-54d23a2780fa" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/internal/helpers/word_helper.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/handlers/home.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/handlers/home.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/services/html_services.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/services/html_services.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/services/html_services.go" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/internal/handlers/home.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+            <state relative-caret-position="255">
+              <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
               <folding>
                 <element signature="e#18#57#0" expanded="true" />
               </folding>
@@ -39,23 +40,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="html_services.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/internal/services/html_services.go">
+      <file leaf-file-name="word_helper.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/internal/helpers/word_helper.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+            <state relative-caret-position="380">
+              <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
               <folding>
-                <element signature="e#18#71#0" expanded="true" />
+                <element signature="e#17#59#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="token.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../golang.org/x/net/html/token.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -121,8 +113,10 @@
         <option value="$PROJECT_DIR$/internal/routers/routers.go" />
         <option value="$PROJECT_DIR$/public/view/home.html" />
         <option value="$PROJECT_DIR$/internal/helpers/requests.go" />
-        <option value="$PROJECT_DIR$/internal/handlers/home.go" />
         <option value="$PROJECT_DIR$/internal/services/html_services.go" />
+        <option value="$PROJECT_DIR$/internal/services/word_services.go" />
+        <option value="$PROJECT_DIR$/internal/handlers/home.go" />
+        <option value="$PROJECT_DIR$/internal/helpers/word_helper.go" />
       </list>
     </option>
   </component>
@@ -165,12 +159,6 @@
               <item name="word-counter" type="462c0819:PsiDirectoryNode" />
               <item name="internal" type="462c0819:PsiDirectoryNode" />
               <item name="helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="word-counter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="word-counter" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="word-counter" type="b2602c69:ProjectViewProjectNode" />
@@ -257,16 +245,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding>
-            <element signature="e#14#128#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/view/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -294,6 +272,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/internal/services/word_services.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../../golang.org/x/net/html/token.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -301,22 +286,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/internal/services/html_services.go">
+    <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        <state relative-caret-position="180">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding>
-            <element signature="e#18#71#0" expanded="true" />
+            <element signature="e#14#128#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/internal/handlers/home.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        <state relative-caret-position="255">
+          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
           <folding>
             <element signature="e#18#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/internal/helpers/word_helper.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+          <folding>
+            <element signature="e#17#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
