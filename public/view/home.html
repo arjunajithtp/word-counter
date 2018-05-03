@@ -23,6 +23,19 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script> -->
     <script src="/public/static/javascript/custom/app.js"></script>
     <script src = "/public/static/javascript/custom/home.js"></script>
+    <style>
+        .cell-wrap {
+            padding-left: 2px;
+            padding-right: 2px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+
+        .cell {
+            border: 1px solid #ccc;
+            padding: 5px 15px
+        }
+    </style>
 </head>
 <body ng-app="myApp">
     <div ng-controller="AppCtrl">
@@ -36,11 +49,15 @@
             <label ng-bind="url"></label>
         </div>
 
-        <div>
-            <div class="col-md-4" ng-repeat="remainder in [0,1,2,4,5]">
-                <span ng-repeat="(key, value) in words" ng-if="$index % 6 == remainder">
-                    <label ng-bind="key"></label>
-                </span>
+        <div class="content">
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-12 row" >
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 cell-wrap" ng-repeat="key in keys">
+                        <div class="cell">
+                            <label ng-bind="key"></label> - {{`{{gridData[key]}}`}}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
