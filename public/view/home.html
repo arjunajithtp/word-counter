@@ -3,11 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>word-counter</title>
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE, NO-STORE, must-revalidate">
+    <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+    <META HTTP-EQUIV="EXPIRES" CONTENT=0>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet/css" href="/public/static/stylesheet/bootstrap.min.css">
+    <link rel="stylesheet/less" type="text/css" href="/public/static/css/style.css">
+    <link rel="stylesheet/less" type="text/css" href="/public/static/bootstrap/bootstrap.less">
+    <script src="/public/static/javascript/less.js"></script>
+    <script src="/public/static/javascript/jquery.min.js"></script>
+    <script src="/public/static/javascript/bootstrap.min.js"></script>
+    <script src="/public/static/javascript/output.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.7/angular.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script> -->
+    <script src="/public/static/javascript/custom/app.js"></script>
+    <script src = "/public/static/javascript/custom/home.js"></script>
 </head>
-<body>
-    <form method="post" action="/home">
-        <input type="text" id="url" name="url">
-        <button>Submit</button>
-    </form>
+<body ng-app="myApp">
+    <div ng-controller="AppCtrl">
+        <form>
+            <input type="text" id="url" name="url"  ng-model="url">
+            <button type="button" ng-click="getWordCount()">Submit</button>
+        </form>
+
+        <div>
+            <label>URL to be captured:</label>
+            <label ng-bind="url"></label>
+        </div>
+
+        <div>
+            <div class="col-md-4" ng-repeat="remainder in [0,1,2,4,5]">
+                <span ng-repeat="(key, value) in words" ng-if="$index % 6 == remainder">
+                    <label ng-bind="key"></label>
+                </span>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
