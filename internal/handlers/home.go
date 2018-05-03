@@ -1,13 +1,13 @@
 package handlers
 
 import (
-	"net/http"
-	"log"
-	"github.com/arjunajithtp/word-counter/internal/helpers"
 	"encoding/json"
+	"github.com/arjunajithtp/word-counter/internal/helpers"
+	"log"
+	"net/http"
 )
 
-func HomeHandler(w http.ResponseWriter, r *http.Request)  {
+func HomeHandler(w http.ResponseWriter, r *http.Request) {
 
 	if r.Method == http.MethodPost {
 		r.ParseForm()

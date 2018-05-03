@@ -2,11 +2,11 @@ package helpers
 
 import (
 	"golang.org/x/net/html"
-	"strings"
 	"regexp"
+	"strings"
 )
 
-func HTMLTagRemover(dataBytes []byte) []string{
+func HTMLTagRemover(dataBytes []byte) []string {
 	var words []string
 	domDocTest := html.NewTokenizer(strings.NewReader(string(dataBytes)))
 	previousStartTokenTest := domDocTest.Token()

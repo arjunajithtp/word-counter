@@ -1,11 +1,11 @@
 package routers
 
 import (
-	"github.com/go-chi/chi"
 	"github.com/arjunajithtp/word-counter/internal/handlers"
+	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
-	"os"
 	"net/http"
+	"os"
 	"path/filepath"
 	"strings"
 )

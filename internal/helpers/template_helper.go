@@ -1,9 +1,9 @@
 package helpers
 
 import (
-	"net/http"
-	"html/template"
 	"fmt"
+	"html/template"
+	"net/http"
 )
 
 func RenderPage(w http.ResponseWriter, pageName string, data interface{}) error {

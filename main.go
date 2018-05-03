@@ -1,9 +1,9 @@
 package main
 
 import (
-	"net/http"
 	"github.com/arjunajithtp/word-counter/internal/routers"
 	"log"
+	"net/http"
 )
 
 func main() {
