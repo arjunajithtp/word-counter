@@ -20,8 +20,17 @@ func HomeHandler(w http.ResponseWriter, r *http.Request)  {
 		if err != nil {
 			log.Println("error while trying to remove the html tags: ", err)
 		}
-		log.Println("Words: ", words)
 
+		var wordCountMap map[string]int
+		for _, word := range words {
+			if wordCountMap[word] == 0 {
+				wordCountMap = make(map[string]int)
+			}
+			count := wordCountMap[word]
+			count++
+			wordCountMap[word] = count
+		}
+		log.Println(wordCountMap)
 		return
 	}
 	err := helpers.RenderPage(w, "home", nil)
